@@ -1,0 +1,57 @@
+{% extends 'users/userbase.html' %}
+{% load static %}
+
+{% block contents %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Results</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .result-box {
+            padding: 15px;
+            background: #e9f5ff;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Training Results</h1>
+        <div class="result-box">
+            <strong>Training Accuracy:</strong> {{ accuracy }}
+        </div>
+        <div class="result-box">
+            <strong>Training Loss:</strong> {{ loss }}
+        </div>
+        <div class="result-box">
+            <strong>Validation Loss:</strong> {{ val_loss }}
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

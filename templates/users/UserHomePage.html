@@ -1,0 +1,88 @@
+{% comment %} {% extends "users/userbase.html" %} {% endcomment %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WBC Classification Using CNN</title>
+
+    <style>
+        /* Background Styling */
+        body {
+            background-image: url("{% static 'wbcimages.jpeg' %}"); /* Replace 'background_image.jpg' with the actual filename */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Main Content Styling */
+        .homepage-content {
+            text-align: center;
+            color: #333;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 100px auto; /* Center content with margin */
+            max-width: 600px;
+        }
+
+        .homepage-content h2 {
+            font-family:Times New Roman;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: black;
+        }
+
+        .homepage-content p {
+            font-family:Times New Roman;
+            color:green;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Links Styling */
+        .homepage-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .homepage-links .button {
+            display: inline-block;
+            background-color: #6C3483;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .homepage-links .button:hover {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="homepage-content">
+        <h2>WBC Classification Using CNN</h2>
+        <p>Discover various WBC cells with our classification tool powered by a Convolutional Neural Network. Upload a WBC cell image to see its classification or sign up to start using the tool.</p>
+       
+        
+        <div class="homepage-links">
+            {% comment %} <a href="{% url 'ViewDataset' %}" class="button">Explore Dataset</a> {% endcomment %}
+            <a href="{% url 'training' %}" class="button">Train the Model</a>
+            <a href="{% url 'predictions' %}" class="button">Start Analysis</a>
+            <a href="{% url 'index' %}" class="button">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
