@@ -10,3 +10,4 @@ scikit-learn
 tensorflow
 opencv-python
 django-cors-headers==4.3.1
+streamlit
