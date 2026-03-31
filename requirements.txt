@@ -1,7 +1,11 @@
-streamlit
+Django
+gunicorn
+whitenoise
+psycopg2-binary
+pillow
 numpy
 pandas
-pillow
+django-cors-headers==4.3.1
 scikit-learn
-tensorflow-cpu
-opencv-python-headless
+tensorflow
+opencv-python
